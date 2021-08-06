@@ -1,0 +1,1 @@
+{"version":3,"file":"CqlErrorCreator.d.ts","sourceRoot":"","sources":["../../src/CqlErrorCreator.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,iBAAiB,EAAC,MAAM,4BAA4B,CAAC;AAC7D,OAAO,WAAW,MAAM,eAAe,CAAC;AACxC,OAAO,QAAQ,MAAM,gBAAgB,CAAC;AAEtC,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,WAAW,CAAC,QAAQ,CAAC;gBACpD,GAAG,EAAE,iBAAiB;IAKlC,SAAS,CAAC,eAAe;IAQzB,SAAS,CAAC,KAAK,IAAI,QAAQ;CAW5B"}
