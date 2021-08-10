@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import AceEditor from 'react-ace';
+import brace from 'brace';
+import 'brace/theme/monokai';
 
 import 'ace-builds/src-noconflict/mode-java';
 import 'ace-builds/src-noconflict/theme-github';
@@ -13,7 +15,7 @@ class EditorHome extends Component {
         <AceEditor
           value={this.props.editorValue}
           mode=""
-          theme="github"
+          theme="monokai"
           onChange={(e) => this.props.handleEditorChange(e)}
           name="UNIQUE_ID_OF_DIV"
           editorProps={{ $blockScrolling: true }}
@@ -38,7 +40,17 @@ class EditorHome extends Component {
               type: 'error',
             },
           ]}
+          markers={[
+            {
+              startRow: 4,
+              endRow: 7,
+              className: 'error-marker',
+              type: 'text',
+              inFront: true,
+            },
+          ]}
         ></AceEditor>
+        {/* <span className="error-marker"></span> */}
       </React.Fragment>
     );
   }

@@ -60,3 +60,8 @@
 .ace_print-margin {
   visibility: hidden !important;
 }
+
+.error-marker {
+  background: rgba(255, 50, 50, 0.1);
+  position: absolute;
+}
