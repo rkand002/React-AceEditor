@@ -2,24 +2,15 @@ import React, { Component } from 'react';
 import AceEditor from 'react-ace';
 import brace from 'brace';
 import 'brace/theme/monokai';
-// import CustomCqlMode from '../cqlMode.js';
 import { addCompleter } from 'ace-builds/src-noconflict/ext-language_tools';
 
-import 'ace-builds/src-noconflict/mode-java';
+import 'cql-ace-syntax/cql';
 import 'ace-builds/src-noconflict/theme-github';
 import 'ace-builds/src-noconflict/ext-language_tools';
 
 class EditorHome extends Component {
   state = {};
 
-  // Custom Mode
-  // componentDidMount() {
-  //   const customMode = new CustomCqlMode();
-  //   this.refs = React.createRef();
-  //   this.refs.aceEditor.editor.getSession().setMode(customMode);
-  // }
-
-  // Custom AutoComplete
   componentDidMount() {
     addCompleter({
       getCompletions: function (editor, session, pos, prefix, callback) {
@@ -35,12 +26,13 @@ class EditorHome extends Component {
       },
     });
   }
+
   render() {
     return (
       <React.Fragment>
         <AceEditor
           value={this.props.editorValue}
-          mode="text"
+          mode="cql"
           theme="monokai"
           onChange={(e) => this.props.handleEditorChange(e)}
           name="UNIQUE_ID_OF_DIV"
